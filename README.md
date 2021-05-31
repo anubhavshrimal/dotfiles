@@ -6,7 +6,7 @@ To reproduce the setup on a new machine, run the following commands:
 
 ```bash
 cd ~
-git clone https://github.com/anubhavshrimal/dotfiles.git .dotfiles
+git clone git@github.com:anubhavshrimal/dotfiles.git .dotfiles
 cd .dotfiles/ 
 ```
 
