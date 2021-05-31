@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+- clean: ['~']
+- link:
+    # ~/bin/ack:
+    # ~/.vim:
+    # ~/.vimrc:
+    #   relink: true
+    ~/.zshrc:
+      force: true
+    # ~/.config/:
+    #   glob: true
+    #   path: config/*
+    #   relink: true
+    #   exclude: [ config/Code ]
+    # ~/.config/Code/User/:
+    #   create: true
+    #   glob: true
+    #   path: config/Code/User/*
+    #   relink: true
