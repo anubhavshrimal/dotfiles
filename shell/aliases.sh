@@ -10,6 +10,18 @@ alias mv='mv -i'
 
 # Others
 alias e="exit"
+alias mkdir="mkdir -p"
+alias df="df -h"
+
+# Git aliases
+alias gs="git status"
+alias gc="git commit"
+alias gpom="git push origin master"
+alias gco="git checkout"
+alias ga="git add -A"
+alias gundo="git restore --staged"
+
+
 
 # Go up [n] directories
 up()

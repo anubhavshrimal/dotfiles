@@ -2,9 +2,9 @@
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=162'
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=154"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=226"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=162'
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=154"
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=226"
 autoload -Uz compinit && compinit -i
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
