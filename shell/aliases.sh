@@ -45,3 +45,9 @@ up()
     fi
     cd "${cdir}"
 }
+
+dfu() {
+    (
+        cd ~/.dotfiles && git pull --ff-only && ./install -q
+    )
+}

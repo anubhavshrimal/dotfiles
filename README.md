@@ -5,8 +5,9 @@ This is my dotfiles setup for macos and linux.
 To reproduce the setup on a new machine, run the following commands:
 
 ```bash
-git clone https://github.com/anubhavshrimal/dotfiles.git
-cd dotfiles/
+cd ~
+git clone https://github.com/anubhavshrimal/dotfiles.git .dotfiles
+cd .dotfiles/ 
 ```
 
 ## Brewfile
