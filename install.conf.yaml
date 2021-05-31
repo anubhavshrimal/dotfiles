@@ -9,3 +9,5 @@
     ~/.gitignore_global:
     ~/.gitconfig:
     ~/.gitmessage:
+    ~/.shell:
+    ~/.zsh:
