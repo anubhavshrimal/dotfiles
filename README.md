@@ -35,11 +35,29 @@ cd .dotfiles/
 
 ## Terminal
 
+### For MacOS
+
 - [Pure](https://github.com/sindresorhus/pure) zsh prompt (already installed using Brewfile setup)
 - Install [Powerline fonts](https://github.com/powerline/fonts)
 - Import Terminal theme: [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/blob/master/OS%20X%20Terminal/Tomorrow%20Night%20Eighties.terminal)
 - Font: `Droid Sans Mono for Powerline`
 - Font size: `18`
+
+### For Cloud Desktop
+
+- Pure needs to be installed manually because brew installation doesn't work.
+```bash
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh_local/pure"
+
+# Add pure directory path in .zshrc_local
+cat >> .zshrc_local
+fpath+=$HOME/.zsh_local/pure
+
+# SSH invokes .zprofile first, hence we need to source .zshrc from there
+# Add source ~/.zshrc in .zprofile
+cat >> .zprofile
+source ~/.zshrc
+```
 
 ## Dotfiles setup
 
