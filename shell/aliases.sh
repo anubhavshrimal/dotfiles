@@ -9,6 +9,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 # Others
+alias v="vim"
 alias e="exit"
 alias mkdir="mkdir -p"
 alias df="df -h"
@@ -20,8 +21,7 @@ alias gpom="git push origin master"
 alias gco="git checkout"
 alias ga="git add -A"
 alias gundo="git restore --staged"
-
-
+alias glog="git log --all --graph --decorate"
 
 # Go up [n] directories
 up()
