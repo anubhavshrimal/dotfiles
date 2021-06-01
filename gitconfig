@@ -4,6 +4,14 @@
 [commit]
   template = ~/.gitmessage
 
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = auto 
+  pager = true
+
 # Allow local customizations in the .gitconfig_local file
 [include]
 	path = ~/.gitconfig_local

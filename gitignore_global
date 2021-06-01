@@ -1,3 +1,22 @@
+# Compiled source #
+###################
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# Editing tools and IDEs #
+##########################
+[._]*.sw[a-p]
+[._]*.s[a-v][a-z]
+*~
+~*
+\#*\#
+\.#*
+.ipynb_checkpoints/ 
+ 
 # OS generated files #
 ######################
 .DS_Store
