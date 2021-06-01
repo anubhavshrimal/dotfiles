@@ -17,15 +17,20 @@ cd .dotfiles/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 - To install the dependencies and apps using brew:
+    - For MacOS
+    ```bash
+    # Minimal apps
+    brew bundle --file=./brewfiles/MinimalBrewfile
 
-```bash
-# Minimal apps
-brew bundle --file=./brewfiles/MinimalBrewfile
+    # Extras if needed
+    brew bundle --file=./brewfiles/ExtrasBrewfile
+    ```
 
-# Extras if needed
-brew bundle --file=./brewfiles/ExtrasBrewfile
-```
-
+    - For Linux / Cloud desktop
+    ```bash
+    # Minimal apps
+    brew bundle --file=./brewfiles/CloudBrewfile
+    ```
 - To create a `Brewfile` from old machine run: `brew bundle dump`
 
 ## Terminal
