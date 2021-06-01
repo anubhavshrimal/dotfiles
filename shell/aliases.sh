@@ -1,7 +1,8 @@
 # ls aliases
+alias ls="ls -G"
 alias la="ls -A"
-alias ll="ls -l"
-alias lla="la -l"
+alias ll="ls -lh"
+alias lla="ll -A"
 alias l="ls"
 
 # Aliases to protect against overwriting
@@ -13,7 +14,7 @@ alias v="vim"
 alias e="exit"
 alias mkdir="mkdir -p"
 alias df="df -h"
-
+alias grep="grep --color"
 # Git aliases
 alias gs="git status"
 alias gc="git commit"

@@ -19,3 +19,5 @@ setopt histfindnodups
 setopt autocd
 setopt vi
 
+# to avoid weird delete key behaviour due to vi mode
+bindkey "^?" backward-delete-char
