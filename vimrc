@@ -33,6 +33,26 @@ set wildmenu
 set mouse+=a " enable mouse mode (scrolling, selection, etc)
 set nofoldenable " disable folding by default
 
+
+" markdown
+let g:markdown_fenced_languages = [
+    \ 'bash=sh',
+    \ 'c',
+    \ 'coffee',
+    \ 'erb=eruby',
+    \ 'javascript',
+    \ 'json',
+    \ 'perl',
+    \ 'python',
+    \ 'ruby',
+    \ 'yaml',
+    \ 'go',
+    \ 'racket',
+    \ 'haskell',
+\]
+let g:markdown_syntax_conceal = 0
+let g:markdown_folding = 1
+
 " local customizations in ~/.vimrc_local
 let $LOCALFILE=expand("~/.vimrc_local")
 if filereadable($LOCALFILE)
