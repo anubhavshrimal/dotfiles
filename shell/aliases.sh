@@ -23,6 +23,7 @@ alias gco="git checkout"
 alias ga="git add -A"
 alias gundo="git restore --staged"
 alias glog="git log --all --graph --decorate"
+alias gpull="git pull --ff-only"
 
 # Go up [n] directories
 up()
