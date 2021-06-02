@@ -18,6 +18,10 @@ setopt histfindnodups
 
 setopt autocd
 setopt vi
+setopt interactivecomments
 
 # to avoid weird delete key behaviour due to vi mode
 bindkey "^?" backward-delete-char
+
+# Use incremental search
+bindkey "^R" history-incremental-search-backward
