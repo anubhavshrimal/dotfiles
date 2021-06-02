@@ -58,6 +58,7 @@ up()
 
 dfu() {
     (
-        cd ~/.dotfiles && git pull --ff-only && ./install -q
+        cd ~/.dotfiles && git pull --ff-only && ./install -q && source ~/.zshrc
+	echo "sourced ~/.zshrc"
     )
 }
