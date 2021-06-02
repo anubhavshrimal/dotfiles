@@ -62,3 +62,7 @@ source ~/.zshrc
 ## Dotfiles setup
 
 `./install`
+
+
+## Miscellaneous setups
+- See [MISC.md](./MISC.md).
