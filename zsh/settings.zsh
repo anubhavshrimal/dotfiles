@@ -6,7 +6,7 @@ GIT_EDITOR='vim'
 HISTSIZE=100000
 HISTFILE="$HOME/.zsh_history"
 SAVEHIST=$HISTSIZE
-HISTORY_IGNORE="clear:cd:cd -:cd ..:cd ../:exit:* --help:ls:l:ll:lla:e:"
+HISTORY_IGNORE="(clear|cd|cd -|cd ..|cd ../|exit|* --help|ls|l|ll|lla|e)"
 
 setopt appendhistory
 setopt incappendhistory
