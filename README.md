@@ -33,6 +33,12 @@ cd .dotfiles/
     ```
 - To create a `Brewfile` from old machine run: `brew bundle dump`
 
+## Python & Jupyter Notebook
+
+- Install Miniconda ([MacOS](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html) / [Linux](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html))
+- Install Jupyter notebook: `conda install -c conda-forge notebook`
+- Install [nb_extensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions): `conda install -c conda-forge jupyter_contrib_nbextensions`
+
 ## Terminal
 
 ### For MacOS
@@ -63,6 +69,13 @@ source ~/.zshrc
 
 `./install`
 
+- Note: Rename/Backup/Remove any files which throw an error while running the script.
+- If the local scripts contain useful commands required by the system, you can rename the files as follows:
+```bash
+  mv .zshrc .zshrc_local
+  mv .vimrc .vimrc_local
+  mv .gitconfig .gitconfig_local
+```
 
 ## Miscellaneous setups
 - See [MISC.md](./MISC.md).
