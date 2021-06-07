@@ -75,6 +75,7 @@ source ~/.zshrc
   mv .zshrc .zshrc_local
   mv .vimrc .vimrc_local
   mv .gitconfig .gitconfig_local
+  mv .tmux.conf .tmux_local.conf
 ```
 
 ## Miscellaneous setups

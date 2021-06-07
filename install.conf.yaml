@@ -12,3 +12,5 @@
     ~/.shell:
     ~/.zsh:
     ~/.jupyter:
+    ~/.tmux.conf:
+
