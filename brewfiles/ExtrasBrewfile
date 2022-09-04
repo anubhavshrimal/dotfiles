@@ -13,3 +13,5 @@ cask "spotify"
 cask "teamviewer"
 cask "tor-browser"
 cask "transmission"
+cask "raycast"
+
