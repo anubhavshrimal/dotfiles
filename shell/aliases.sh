@@ -32,6 +32,7 @@ alias ga="git add -A"
 alias gundo="git restore --staged"
 alias glog="git log --all --graph --decorate"
 alias gpull="git pull --ff-only"
+alias gdiff="git diff"
 
 # Go up [n] directories
 up()

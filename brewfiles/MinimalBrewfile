@@ -19,3 +19,6 @@ cask "qlmarkdown"
 cask "spectacle"
 cask "visual-studio-code"
 cask "vlc"
+cask "raycast"
+cask "shottr"
+
