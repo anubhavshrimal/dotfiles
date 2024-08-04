@@ -10,6 +10,7 @@ autoload -Uz compinit && compinit -i
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Pure Prompt Terminal
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 PURE_CMD_MAX_EXEC_TIME=10
 autoload -Uz promptinit; promptinit
 prompt pure
