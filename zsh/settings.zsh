@@ -20,6 +20,11 @@ setopt autocd
 setopt vi
 setopt interactivecomments
 
+# Better directory navigation
+setopt autopushd
+setopt pushdignoredups
+setopt pushdsilent
+
 # to avoid weird delete key behaviour due to vi mode
 bindkey "^?" backward-delete-char
 
