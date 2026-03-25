@@ -45,6 +45,7 @@ cd .dotfiles/
 
 - [Pure](https://github.com/sindresorhus/pure) zsh prompt (already installed using Brewfile setup)
 - Install [Powerline fonts](https://github.com/powerline/fonts)
+- Install [iTerm2](https://iterm2.com) (already included in MinimalBrewfile via `brew bundle`)
 - Terminal/iTerm2 theme (pick one):
   - [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/blob/master/OS%20X%20Terminal/Tomorrow%20Night%20Eighties.terminal) (for Terminal.app)
   - [Catppuccin Mocha](https://github.com/catppuccin/iterm/blob/main/colors/catppuccin-mocha.itermcolors) (for iTerm2: Preferences → Profiles → Colors → Color Presets → Import)
