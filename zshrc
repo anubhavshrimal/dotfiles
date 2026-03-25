@@ -24,3 +24,6 @@ bindkey '\e[B' history-beginning-search-forward
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
+
+# fzf keybindings and completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

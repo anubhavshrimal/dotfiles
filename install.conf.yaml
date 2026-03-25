@@ -13,4 +13,12 @@
     ~/.zsh:
     ~/.jupyter:
     ~/.tmux.conf:
+- shell:
+    - command: |
+        if command -v fzf >/dev/null 2>&1; then
+          "$(brew --prefix)/opt/fzf/install" --key-bindings --completion --no-update-rc --no-bash --no-fish
+        fi
+      description: Setting up fzf keybindings and completion
+      stdout: true
+      stderr: true
 
