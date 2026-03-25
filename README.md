@@ -45,7 +45,9 @@ cd .dotfiles/
 
 - [Pure](https://github.com/sindresorhus/pure) zsh prompt (already installed using Brewfile setup)
 - Install [Powerline fonts](https://github.com/powerline/fonts)
-- Import Terminal theme: [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/blob/master/OS%20X%20Terminal/Tomorrow%20Night%20Eighties.terminal)
+- Terminal/iTerm2 theme (pick one):
+  - [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/blob/master/OS%20X%20Terminal/Tomorrow%20Night%20Eighties.terminal) (for Terminal.app)
+  - [Catppuccin Mocha](https://github.com/catppuccin/iterm/blob/main/colors/catppuccin-mocha.itermcolors) (for iTerm2: Preferences → Profiles → Colors → Color Presets → Import)
 - Font: `Droid Sans Mono for Powerline`
 - Font size: `18`
 
