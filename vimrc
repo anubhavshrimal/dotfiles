@@ -1,5 +1,4 @@
 set nocompatible " not vi compatible
-
 "------------------
 " Syntax and indent
 "------------------
@@ -33,6 +32,18 @@ set wildmenu
 set mouse+=a " enable mouse mode (scrolling, selection, etc)
 set nofoldenable " disable folding by default
 set noerrorbells visualbell t_vb= " disable audible bell
+
+" Clipboard: native on local, OSC 52 over SSH
+if has('clipboard')
+    set clipboard=unnamed
+else
+    function! OSCYank()
+        let text = getreg('"')
+        let encoded = system('echo -n ' . shellescape(text) . ' | base64 | tr -d "\n"')
+        call writefile(["\x1b]52;c;" . encoded . "\x07"], '/dev/tty', 'b')
+    endfunction
+    autocmd TextYankPost * if v:event.operator ==# 'y' | call OSCYank() | endif
+endif
 
 " markdown
 let g:markdown_fenced_languages = [
