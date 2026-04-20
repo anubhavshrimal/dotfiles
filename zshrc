@@ -1,9 +1,4 @@
-
-# Kiro CLI pre block. Keep at the top of this file.
-[[ -f "${HOME}/.local/share/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/zshrc.pre.zsh"
-
 # ZSH Autosuggestion
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
@@ -39,11 +34,3 @@ _fzf_complete_c() {
 }
 _fzf_complete_c_post() { awk '{print $1}'; }
 
-
-# Kiro CLI post block. Keep at the bottom of this file.
-[[ -f "${HOME}/.local/share/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/zshrc.post.zsh"
-
-# Set up mise for runtime management
-eval "$(/home/shrimaa/.local/bin/mise activate zsh)"
-source ~/.local/share/mise/completions.zsh
-alias finch='sudo HOME=/home/shrimaa DOCKER_CONFIG=/home/shrimaa/.docker finch'
