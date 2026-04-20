@@ -18,8 +18,24 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 # Others
-alias v="vim"
+v() {
+  if [ $# -eq 0 ]; then
+    local files=$(fzf --preview 'bat --color=always --line-range :200 {} 2>/dev/null || cat {}')
+    [ -n "$files" ] && vim $files
+  else
+    vim "$@"
+  fi
+}
 alias e="exit"
+# Interactive cd — c opens fzf directory picker, c <dir> works normally
+c() {
+  if [ $# -eq 0 ]; then
+    local dir=$(fd --type d --hidden --exclude .git 2>/dev/null | fzf --preview 'ls -1A --color=always {}')
+    [ -n "$dir" ] && cd "$dir"
+  else
+    cd "$@"
+  fi
+}
 alias mkdir="mkdir -p"
 alias df="df -h"
 alias grep="grep --color"
@@ -30,7 +46,12 @@ alias gpom="git push origin master"
 alias gco="git checkout"
 alias ga="git add -A"
 alias gundo="git restore --staged"
-alias glog="git log --all --graph --decorate"
+glog() {
+  git log --all --graph --decorate --oneline --color=always --format='%C(auto)%h%d %s %C(dim)%an, %ar' |
+    fzf --ansi --no-sort --preview 'git show --color=always $(echo {} | grep -o "[a-f0-9]\{7,\}" | head -1)' \
+        --bind 'enter:execute(git show --color=always $(echo {} | grep -o "[a-f0-9]\{7,\}" | head -1) | less -R)' \
+        --preview-window=right:60%
+}
 alias gpull="git pull --ff-only"
 alias gdiff="git diff"
 
