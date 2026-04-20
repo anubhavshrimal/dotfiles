@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
+brew "git-delta"
 brew "pure"
 brew "tmux"
 brew "zsh-autosuggestions"
