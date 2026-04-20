@@ -39,6 +39,7 @@ c() {
 alias mkdir="mkdir -p"
 alias df="df -h"
 alias grep="grep --color"
+alias cat="bat --paging=never -p"
 # Git aliases
 alias gs="git status"
 alias gc="git commit"
@@ -48,7 +49,7 @@ alias ga="git add -A"
 alias gundo="git restore --staged"
 glog() {
   git log --all --graph --decorate --oneline --color=always --format='%C(auto)%h%d %s %C(dim)%an, %ar' |
-    fzf --ansi --no-sort --preview 'git show --color=always $(echo {} | grep -o "[a-f0-9]\{7,\}" | head -1)' \
+    fzf --ansi --no-sort --reverse --preview 'git show --color=always $(echo {} | grep -o "[a-f0-9]\{7,\}" | head -1)' \
         --bind 'enter:execute(git show --color=always $(echo {} | grep -o "[a-f0-9]\{7,\}" | head -1) | less -R)' \
         --preview-window=right:60%
 }
