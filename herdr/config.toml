@@ -21,6 +21,10 @@ new_tab = ["prefix+t", "prefix+c"]
 previous_agent = "prefix+["
 next_agent = "prefix+]"
 
+# tmux: prefix+d detaches. Keep herdr's prefix+q default as a fallback.
+# Note: prefix+shift+d is close_workspace, so a stray shift is destructive.
+detach = ["prefix+d", "prefix+q"]
+
 # tmux: bind r source-file ~/.tmux.conf
 # Swapped with resize_mode, which owns prefix+r by default.
 reload_config = "prefix+r"
