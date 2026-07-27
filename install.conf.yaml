@@ -13,6 +13,8 @@
     ~/.zsh:
     ~/.jupyter:
     ~/.tmux.conf:
+    # Link only config.toml: ~/.config/herdr/ also holds sockets, logs and session.json
+    ~/.config/herdr/config.toml: herdr/config.toml
 - shell:
     - command: |
         if command -v fzf >/dev/null 2>&1; then

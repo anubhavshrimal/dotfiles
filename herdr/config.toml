@@ -1,0 +1,30 @@
+onboarding = false
+[ui]
+show_agent_labels_on_pane_borders = true
+agent_panel_sort = "spaces"
+
+# Match ~/.tmux.conf bindings.
+# Defaults already matching tmux (pane nav h/j/k/l, prefix+minus split down,
+# new tab c, close x, zoom z, tabs 1..9) are left alone.
+[keys]
+prefix = "ctrl+a"
+
+# tmux: bind | split-window -h  (side-by-side)
+# "|" is shift+backslash and can be eaten by the terminal, so keep prefix+v as a fallback.
+split_vertical = ["prefix+|", "prefix+v"]
+
+# New tab on prefix+t; keep the prefix+c default as a fallback.
+new_tab = ["prefix+t", "prefix+c"]
+
+# Agent navigation. Unbound by default in herdr.
+# Order follows the sidebar (agent_panel_sort = "spaces").
+previous_agent = "prefix+["
+next_agent = "prefix+]"
+
+# tmux: bind r source-file ~/.tmux.conf
+# Swapped with resize_mode, which owns prefix+r by default.
+reload_config = "prefix+r"
+resize_mode = "prefix+shift+r"
+
+[experimental]
+pane_history = false
