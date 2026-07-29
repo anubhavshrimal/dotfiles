@@ -25,10 +25,24 @@ next_agent = "prefix+]"
 # Note: prefix+shift+d is close_workspace, so a stray shift is destructive.
 detach = ["prefix+d", "prefix+q"]
 
-# tmux: bind r source-file ~/.tmux.conf
-# Swapped with resize_mode, which owns prefix+r by default.
-reload_config = "prefix+r"
+# reload_config on prefix+shift+c ("config"); resize_mode keeps a shift+r chord.
+# Both move off prefix+r, which the reviewr toggle claims below.
+reload_config = "prefix+shift+c"
 resize_mode = "prefix+shift+r"
 
 [experimental]
-pane_history = false
+pane_history = true
+
+# reviewr code-review sidebar: show/hide on prefix+r (mnemonic: "review").
+# [[keys.command]] can't shadow a native action, so prefix+r had to be freed above.
+[[keys.command]]
+key = "prefix+r"
+type = "shell"
+command = "herdr plugin action invoke toggle --plugin persiyanov.reviewr"
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[ui.toast]
+delivery = "terminal"
